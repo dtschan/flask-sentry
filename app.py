@@ -11,7 +11,8 @@ app = Flask(__name__)
 
 sentry_sdk.init(
     os.environ['SENTRY_DSN'],
-    debug=True,
+    #debug=True,
+    send_default_pii=True,
     integrations=[FlaskIntegration()]
 )
 
